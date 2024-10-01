@@ -1,0 +1,10 @@
+import express, { Router } from "express";
+import { login, register } from "../controller/userController";
+
+const router: Router = express.Router();
+
+router.post("/register", register)
+router.post("/login", login)
+
+export default router;
+
