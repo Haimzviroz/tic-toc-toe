@@ -72,20 +72,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:3004';
 function signin() {
     // Get the username and password values
     const username = document.getElementById('username').value;
+    console.log(username);
     const password = document.getElementById('password').value;
+    console.log(password)
     
     // Create the data object
     const data = {
-        username,
-        password
+        username: username,
+        password : password
     };
-    
+    console.log(data);
     // Make the POST request to the sign-in API
-    fetch(`${baseUrl}/users/signin`, {
+    fetch(`${baseUrl}/users/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -117,11 +119,12 @@ function Signup() {
     const password = document.getElementById('password').value;
     // const confirmPassword = document.getElementById('confirm-password').value;
     const data = {
-        username,
-        password,
+        username: username,
+        password: password,
         // confirmPassword
     };
-    fetch(`${baseUrl}/users/signup`, {
+    console.log(data);
+    fetch(`${baseUrl}/users/register`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -131,8 +134,10 @@ function Signup() {
     .then(response => response.json())
     .then(data => {
         if (data.error) {
+            console.log(data.error);
             alert(data.error);
         } else {
+            console.log(data.message);
             alert(data.message);
         }
     })
