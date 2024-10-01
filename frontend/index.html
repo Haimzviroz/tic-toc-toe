@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login/Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="min-h-screen">
+        <div class="form-container">
+            <div class="particles">
+                <!-- Particles will be added by JavaScript -->
+            </div>
+            
+            <div class="content">
+                <h2>Sign In</h2>
+                
+                <form class="form">
+                    <div class="input-group">
+                        <input type="text" required id="username">
+                        <label>Username</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" required id="password">
+                        <label>Password</label>
+                    </div>
+                    
+                    <div class="input-group confirm-password" style="display: none;">
+                        <input type="password" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    
+                    <div class="links">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <button type="button" class="toggle-form">Need an account? Sign Up</button>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
